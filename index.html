@@ -1,0 +1,245 @@
+<title>WizzTracker — odaklı uygulamalar ailesi</title>
+<style>
+  :root{
+    --bg:#0a0b10; --bg2:#0d0f16; --panel:#14161f; --elev:#1b1e2a;
+    --ink:#f3f5fb; --muted:#9aa2b4; --faint:#646c80; --line:#242938; --line2:#1b1f2c;
+    --brand1:#2f6bff; --brand2:#9a4dff;
+    --income:#34c759; --delivery:#2f80ff; --invoice:#a855f7; --split:#ff477e; --more:#8a93a6;
+    --card-radius:20px;
+  }
+  :root[data-theme="light"]{
+    --bg:#f6f7fb; --bg2:#eef1f7; --panel:#ffffff; --elev:#ffffff;
+    --ink:#111524; --muted:#5a6274; --faint:#8b93a6; --line:#e6e9f1; --line2:#eef1f7;
+  }
+  @media (prefers-color-scheme: light){
+    :root:not([data-theme]){
+      --bg:#f6f7fb; --bg2:#eef1f7; --panel:#ffffff; --elev:#ffffff;
+      --ink:#111524; --muted:#5a6274; --faint:#8b93a6; --line:#e6e9f1; --line2:#eef1f7;
+    }
+  }
+  *{box-sizing:border-box} html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",Roboto,sans-serif;
+    font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  .rnd{font-family:-apple-system,"SF Pro Rounded",BlinkMacSystemFont,"Segoe UI",sans-serif}
+  .mono{font-family:ui-monospace,"SF Mono",Menlo,monospace}
+  .wrap{max-width:72rem;margin:0 auto;padding:0 22px}
+  a{color:inherit;text-decoration:none}
+
+  /* top bar */
+  header.nav{position:sticky;top:0;z-index:20;backdrop-filter:blur(14px);
+    background:color-mix(in srgb,var(--bg) 72%,transparent);border-bottom:1px solid var(--line2)}
+  .nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+  .brand{display:flex;align-items:center;gap:11px;font-weight:800;font-size:18px;letter-spacing:-.02em}
+  .brand .mk{width:30px;height:30px;border-radius:9px;flex:none;
+    background:linear-gradient(140deg,var(--brand1),var(--brand2));
+    box-shadow:0 6px 18px rgba(85,80,255,.4);position:relative}
+  .brand .mk::after{content:"";position:absolute;inset:8px 9px;border-radius:3px;
+    background:#fff;opacity:.92;clip-path:polygon(0 62%,28% 62%,42% 20%,58% 82%,72% 40%,100% 40%,100% 100%,0 100%)}
+  .navr{display:flex;align-items:center;gap:10px}
+  .toggle{display:inline-flex;border:1px solid var(--line);border-radius:999px;overflow:hidden}
+  .toggle button{font:inherit;font-size:13px;font-weight:650;cursor:pointer;border:0;background:transparent;
+    color:var(--muted);padding:6px 12px}
+  .toggle button[aria-pressed="true"]{background:var(--ink);color:var(--bg)}
+  .toggle button:focus-visible{outline:2px solid var(--brand1);outline-offset:1px}
+
+  /* hero */
+  .hero{position:relative;padding:86px 0 40px;overflow:hidden}
+  .glow{position:absolute;inset:-20% -10% auto -10%;height:520px;pointer-events:none;z-index:0;
+    background:radial-gradient(60% 60% at 30% 20%,rgba(47,107,255,.30),transparent 60%),
+      radial-gradient(50% 60% at 78% 30%,rgba(154,77,255,.26),transparent 60%);
+    filter:blur(24px)}
+  :root[data-theme="light"] .glow{opacity:.5}
+  .hero .wrap{position:relative;z-index:1}
+  .eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12.5px;font-weight:650;
+    letter-spacing:.04em;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:6px 13px;margin-bottom:22px}
+  .eyebrow .dot{width:7px;height:7px;border-radius:50%;background:var(--income);box-shadow:0 0 0 4px rgba(52,199,89,.18)}
+  h1{font-size:clamp(2.3rem,6vw,4rem);line-height:1.04;margin:0 0 18px;letter-spacing:-.035em;font-weight:820;text-wrap:balance;max-width:16ch}
+  h1 .grad{background:linear-gradient(100deg,var(--brand1),var(--brand2));-webkit-background-clip:text;background-clip:text;color:transparent}
+  .sub{font-size:clamp(1.05rem,2.2vw,1.25rem);color:var(--muted);max-width:52ch;margin:0 0 28px}
+  .herocta{display:flex;flex-wrap:wrap;gap:12px}
+  .btn{display:inline-flex;align-items:center;gap:9px;font-weight:680;font-size:15px;
+    padding:12px 20px;border-radius:12px;border:1px solid var(--line);transition:.16s;cursor:pointer}
+  .btn.primary{background:linear-gradient(135deg,var(--brand1),var(--brand2));border-color:transparent;color:#fff;
+    box-shadow:0 10px 26px rgba(85,80,255,.34)}
+  .btn.primary:hover{transform:translateY(-1px);box-shadow:0 14px 32px rgba(85,80,255,.42)}
+  .btn.ghost:hover{border-color:var(--muted)}
+  .btn svg{width:17px;height:17px}
+
+  /* apps */
+  .apps{padding:34px 0 20px}
+  .sechead{display:flex;align-items:baseline;justify-content:space-between;gap:16px;margin-bottom:20px;flex-wrap:wrap}
+  .sechead h2{font-size:1.5rem;letter-spacing:-.02em;margin:0;font-weight:760}
+  .sechead p{margin:0;color:var(--faint);font-size:14px}
+  .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+  @media (max-width:720px){.grid{grid-template-columns:1fr}}
+  .card{position:relative;background:var(--panel);border:1px solid var(--line);border-radius:var(--card-radius);
+    padding:22px;display:flex;flex-direction:column;gap:14px;transition:.18s;overflow:hidden}
+  .card:hover{border-color:color-mix(in srgb,var(--ac) 55%,var(--line));transform:translateY(-2px)}
+  .card::before{content:"";position:absolute;inset:0 0 auto 0;height:3px;background:var(--ac);opacity:.9}
+  .card .top{display:flex;align-items:center;gap:14px}
+  .tile{width:56px;height:56px;border-radius:15px;flex:none;display:grid;place-items:center;
+    background:linear-gradient(150deg,var(--ac),color-mix(in srgb,var(--ac) 55%,#000 8%));
+    box-shadow:0 8px 20px color-mix(in srgb,var(--ac) 40%,transparent)}
+  .tile svg{width:30px;height:30px;fill:none;stroke:#fff;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  .card h3{margin:0;font-size:1.18rem;font-weight:740;letter-spacing:-.01em}
+  .card .status{font-size:11px;font-weight:700;letter-spacing:.03em;padding:3px 9px;border-radius:999px}
+  .status.live{color:var(--income);background:rgba(52,199,89,.14)}
+  .status.soon{color:var(--faint);background:color-mix(in srgb,var(--faint) 16%,transparent)}
+  .card .desc{color:var(--muted);font-size:14.5px;margin:0;flex:1}
+  .chips{display:flex;flex-wrap:wrap;gap:7px}
+  .chip{font-size:12px;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:4px 10px}
+  .card .act{display:flex;gap:10px;margin-top:2px}
+  .abtn{display:inline-flex;align-items:center;gap:7px;font-weight:680;font-size:14px;padding:9px 16px;border-radius:10px;cursor:pointer;transition:.15s}
+  .abtn.open{background:var(--ac);color:#fff}
+  .abtn.open:hover{filter:brightness(1.08)}
+  .abtn.mut{border:1px solid var(--line);color:var(--muted)}
+  .abtn.mut[aria-disabled="true"]{opacity:.6;cursor:default}
+  .abtn svg{width:15px;height:15px}
+
+  /* strip */
+  .strip{margin:40px 0 8px;border:1px solid var(--line);border-radius:var(--card-radius);
+    background:linear-gradient(120deg,var(--bg2),var(--panel));padding:26px 24px;
+    display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
+  .strip h3{margin:0 0 4px;font-size:1.2rem;font-weight:720}
+  .strip p{margin:0;color:var(--muted);font-size:14px;max-width:46ch}
+  .feats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:44px 0 8px}
+  @media (max-width:640px){.feats{grid-template-columns:1fr}}
+  .feat{padding:2px 0}
+  .feat .fi{width:34px;height:34px;border-radius:10px;display:grid;place-items:center;margin-bottom:10px;
+    background:color-mix(in srgb,var(--brand1) 16%,transparent)}
+  .feat .fi svg{width:18px;height:18px;stroke:var(--brand1);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  .feat h4{margin:0 0 3px;font-size:15px;font-weight:680}
+  .feat p{margin:0;color:var(--muted);font-size:13.5px}
+
+  footer{margin-top:56px;border-top:1px solid var(--line2);padding:28px 0 60px}
+  footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;color:var(--faint);font-size:13.5px}
+  footer a{color:var(--muted)}
+</style>
+
+<header class="nav"><div class="wrap">
+  <div class="brand rnd"><span class="mk"></span>WizzTracker</div>
+  <div class="navr">
+    <div class="toggle" role="group" aria-label="Dil">
+      <button data-lang="tr" aria-pressed="true">TR</button>
+      <button data-lang="en" aria-pressed="false">EN</button>
+    </div>
+  </div>
+</div></header>
+
+<section class="hero">
+  <div class="glow"></div>
+  <div class="wrap">
+    <span class="eyebrow"><span class="dot"></span><span data-t="badge">4 uygulama · iOS · Android · Web</span></span>
+    <h1 class="rnd"><span data-t="h1a">Tek marka,</span> <span class="grad" data-t="h1b">odaklı uygulamalar.</span></h1>
+    <p class="sub" data-t="sub">Para, iş ve gündelik hayat için sade, hızlı ve her yerde çalışan araçlar. Her uygulama tek bir işi kusursuz yapar — hepsi WizzTracker ailesinden.</p>
+    <div class="herocta">
+      <a class="btn primary" href="#apps" data-t="cta1">Uygulamaları gör</a>
+      <a class="btn ghost" href="delivery/" data-t="cta2">Delivery'yi aç →</a>
+    </div>
+  </div>
+</section>
+
+<section class="apps" id="apps"><div class="wrap">
+  <div class="sechead">
+    <h2 data-t="apps_h">Uygulamalar</h2>
+    <p data-t="apps_p">Web'de aç ya da App Store'dan indir · daha fazlası yolda</p>
+  </div>
+  <div class="grid">
+
+    <div class="card" style="--ac:var(--delivery)">
+      <div class="top">
+        <span class="tile"><svg viewBox="0 0 24 24"><rect x="1" y="7" width="14" height="9" rx="1"/><path d="M15 10h4l3 3v3h-7z"/><circle cx="6" cy="18" r="2"/><circle cx="18" cy="18" r="2"/></svg></span>
+        <div><h3>WizzTracker Delivery</h3><span class="status live" data-t="st_live">YAYINDA · WEB</span></div>
+      </div>
+      <p class="desc" data-t="d_del">Kuryeler için kazanç merkezi: teslimat / saat / komisyon modeline göre otomatik kazanç, avans, araç ve yakıt takibi, raporlar.</p>
+      <div class="chips"><span class="chip" data-t="c_del1">Çalışma modeli</span><span class="chip" data-t="c_del2">Araç & yakıt</span><span class="chip">10 dil</span></div>
+      <div class="act"><a class="abtn open" href="delivery/"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg><span data-t="open">Aç</span></a></div>
+    </div>
+
+    <div class="card" style="--ac:var(--income)">
+      <div class="top">
+        <span class="tile"><svg viewBox="0 0 24 24"><rect x="2" y="6" width="20" height="12" rx="2"/><circle cx="12" cy="12" r="3"/><path d="M6 9v6M18 9v6"/></svg></span>
+        <div><h3>WizzTracker Income</h3><span class="status soon" data-t="st_soon">YAKINDA · WEB</span></div>
+      </div>
+      <p class="desc" data-t="d_inc">Kişisel gelir & gider takibi: maaş, bahşiş, prim ve serbest gelirini topla, hedef koy, birikim yönet, raporlarla gör.</p>
+      <div class="chips"><span class="chip" data-t="c_inc1">Hedefler & birikim</span><span class="chip" data-t="c_inc2">Raporlar</span><span class="chip">25 para birimi</span></div>
+      <div class="act"><span class="abtn mut" aria-disabled="true"><span data-t="soon">Yakında</span></span></div>
+    </div>
+
+    <div class="card" style="--ac:var(--invoice)">
+      <div class="top">
+        <span class="tile"><svg viewBox="0 0 24 24"><path d="M6 2h9l4 4v16l-2.5-1.5L14 22l-2.5-1.5L9 22l-2.5-1.5L4 22V4a2 2 0 012-2z"/><path d="M8 8h8M8 12h8M8 16h5"/></svg></span>
+        <div><h3>WizzTracker Invoice</h3><span class="status soon" data-t="st_soon">YAKINDA · WEB</span></div>
+      </div>
+      <p class="desc" data-t="d_inv">İşletmen için cepte ön muhasebe: cari, stok, fatura ve tahsilat — ekiple bulutta senkron, çoklu para birimi, PDF.</p>
+      <div class="chips"><span class="chip" data-t="c_inv1">Cari & stok</span><span class="chip" data-t="c_inv2">Fatura & PDF</span><span class="chip" data-t="c_inv3">Ekip · bulut</span></div>
+      <div class="act"><span class="abtn mut" aria-disabled="true"><span data-t="soon">Yakında</span></span></div>
+    </div>
+
+    <div class="card" style="--ac:var(--split)">
+      <div class="top">
+        <span class="tile"><svg viewBox="0 0 24 24"><path d="M3 21v-2a4 4 0 014-4h3M14 15h3a4 4 0 014 4v2"/><circle cx="8.5" cy="7" r="3"/><circle cx="16" cy="9" r="2.5"/></svg></span>
+        <div><h3>WizzTracker SplitLife</h3><span class="status soon" data-t="st_soon">YAKINDA · WEB</span></div>
+      </div>
+      <p class="desc" data-t="d_spl">Ortak yaşam kolaylaşsın: ev arkadaşı, çift veya aile için ortak gider ve görev paylaşımı — adil, net, herkes güncel.</p>
+      <div class="chips"><span class="chip" data-t="c_spl1">Gider paylaşımı</span><span class="chip" data-t="c_spl2">Görevler</span><span class="chip" data-t="c_spl3">Ev / çift / aile</span></div>
+      <div class="act"><span class="abtn mut" aria-disabled="true"><span data-t="soon">Yakında</span></span></div>
+    </div>
+
+  </div>
+
+  <div class="feats">
+    <div class="feat">
+      <span class="fi"><svg viewBox="0 0 24 24"><path d="M12 2a7 7 0 017 7c0 5-7 13-7 13S5 14 5 9a7 7 0 017-7z"/><circle cx="12" cy="9" r="2.5"/></svg></span>
+      <h4 data-t="f1h">Her yerde</h4><p data-t="f1p">iOS, Android ve web — aynı deneyim, tek hesap.</p>
+    </div>
+    <div class="feat">
+      <span class="fi"><svg viewBox="0 0 24 24"><path d="M21 12a9 9 0 11-6.2-8.5"/><path d="M21 4v5h-5"/></svg></span>
+      <h4 data-t="f2h">Anlık senkron</h4><p data-t="f2p">Web'de yaptığın işlem telefonuna anında yansır <span class="mono" style="font-size:11px;opacity:.7">(yakında)</span>.</p>
+    </div>
+    <div class="feat">
+      <span class="fi"><svg viewBox="0 0 24 24"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6z"/><path d="M9 12l2 2 4-4"/></svg></span>
+      <h4 data-t="f3h">Güvenli & sade</h4><p data-t="f3p">Verin senin. Reklam yok, izleme yok — sadece işini gör.</p>
+    </div>
+  </div>
+</div></section>
+
+<footer><div class="wrap">
+  <span>© 2026 WizzTracker</span>
+  <span><a href="mailto:wizztracker@outlook.com">wizztracker@outlook.com</a></span>
+</div></footer>
+
+<script>
+  var T={
+    tr:{},
+    en:{
+      badge:"4 apps · iOS · Android · Web",
+      h1a:"One brand,",h1b:"focused apps.",
+      sub:"Simple, fast tools for money, work and everyday life that run everywhere. Each app does one job flawlessly — all from the WizzTracker family.",
+      cta1:"See the apps",cta2:"Open Delivery →",
+      apps_h:"Apps",apps_p:"Open on web or get it on the App Store · more coming",
+      st_live:"LIVE · WEB",st_soon:"SOON · WEB",open:"Open",soon:"Soon",
+      d_del:"An earnings hub for couriers: automatic pay by delivery / hour / commission model, advances, vehicle & fuel tracking, reports.",
+      c_del1:"Work model",c_del2:"Vehicle & fuel",
+      d_inc:"Personal income & expense tracking: salary, tips, bonuses and freelance income in one place, goals, savings, reports.",
+      c_inc1:"Goals & savings",c_inc2:"Reports",
+      d_inv:"Pocket bookkeeping for your business: accounts, stock, invoices and payments — synced with your team in the cloud, multi-currency, PDF.",
+      c_inv1:"Accounts & stock",c_inv2:"Invoices & PDF",c_inv3:"Team · cloud",
+      d_spl:"Shared living made simple: split expenses and tasks for roommates, couples or family — fair, clear, everyone in sync.",
+      c_spl1:"Expense split",c_spl2:"Tasks",c_spl3:"Home / couple / family",
+      f1h:"Everywhere",f1p:"iOS, Android and web — one experience, one account.",
+      f2h:"Realtime sync",f2p:"What you do on the web lands on your phone instantly (soon).",
+      f3h:"Private & simple",f3p:"Your data is yours. No ads, no tracking — just get it done."
+    }
+  };
+  // capture TR defaults from DOM
+  document.querySelectorAll('[data-t]').forEach(function(el){T.tr[el.getAttribute('data-t')]=el.innerHTML;});
+  var btns=document.querySelectorAll('.toggle button');
+  function setLang(l){
+    document.documentElement.lang=l;
+    document.querySelectorAll('[data-t]').forEach(function(el){var k=el.getAttribute('data-t');if(T[l][k]!=null)el.innerHTML=T[l][k];});
+    btns.forEach(function(b){b.setAttribute('aria-pressed',b.dataset.lang===l?'true':'false');});
+  }
+  btns.forEach(function(b){b.addEventListener('click',function(){setLang(b.dataset.lang);});});
+</script>
