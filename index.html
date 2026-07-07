@@ -1,3 +1,13 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0a0b10">
+<meta name="description" content="WizzTracker — para, iş ve gündelik hayat için odaklı uygulamalar ailesi. iOS, Android ve web; her uygulama tek bir işi kusursuz yapar.">
+<meta property="og:title" content="WizzTracker — odaklı uygulamalar ailesi">
+<meta property="og:description" content="Delivery, Income, Invoice ve SplitLife — tek marka, odaklı uygulamalar. iOS · Android · Web.">
+<meta property="og:type" content="website">
 <title>WizzTracker — odaklı uygulamalar ailesi</title>
 <style>
   :root{
@@ -115,7 +125,31 @@
   footer{margin-top:56px;border-top:1px solid var(--line2);padding:28px 0 60px}
   footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;color:var(--faint);font-size:13.5px}
   footer a{color:var(--muted)}
+
+  /* mobil ince ayar (viewport meta ile birlikte) */
+  @media (max-width:560px){
+    body{font-size:15.5px}
+    .wrap{padding:0 16px}
+    .nav .wrap{height:56px}
+    .brand{font-size:16px}
+    .brand .mk{width:26px;height:26px}
+    .hero{padding:48px 0 26px}
+    .eyebrow{margin-bottom:16px}
+    h1{max-width:100%}
+    .sub{margin-bottom:22px}
+    .herocta{flex-direction:column;align-items:stretch}
+    .btn{justify-content:center;width:100%}
+    .apps{padding:22px 0 12px}
+    .grid{gap:14px}
+    .card{padding:18px}
+    .strip{padding:20px 18px}
+    .feats{gap:18px;margin:34px 0 8px}
+    footer{padding:24px 0 44px}
+    footer .wrap{flex-direction:column;gap:6px}
+  }
 </style>
+</head>
+<body>
 
 <header class="nav"><div class="wrap">
   <div class="brand rnd"><span class="mk"></span>WizzTracker</div>
@@ -243,3 +277,5 @@
   }
   btns.forEach(function(b){b.addEventListener('click',function(){setLang(b.dataset.lang);});});
 </script>
+</body>
+</html>
