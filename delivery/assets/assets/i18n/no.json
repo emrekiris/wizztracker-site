@@ -1202,5 +1202,9 @@
   "sync_off": "Bare denne enheten",
   "sign_in_to_sync": "Logg inn for å synkronisere mellom enhetene dine",
   "goal_type": "Mål",
-  "savings_type": "Sparing"
+  "savings_type": "Sparing",
+  "link_apple": "Koble til Apple-konto",
+  "link_google": "Koble til Google-konto",
+  "link_already_used": "Denne kontoen er allerede koblet til en annen konto — den kan ikke slås sammen automatisk.",
+  "accounts_linked": "Apple og Google koblet til"
 }

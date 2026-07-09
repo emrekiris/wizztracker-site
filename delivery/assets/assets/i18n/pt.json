@@ -1202,5 +1202,9 @@
   "sync_off": "Apenas este dispositivo",
   "sign_in_to_sync": "Faça login para sincronizar entre seus dispositivos",
   "goal_type": "Meta",
-  "savings_type": "Poupança"
+  "savings_type": "Poupança",
+  "link_apple": "Vincular conta Apple",
+  "link_google": "Vincular conta Google",
+  "link_already_used": "Esta conta já está vinculada a outra conta — não pode ser mesclada automaticamente.",
+  "accounts_linked": "Apple e Google vinculados"
 }

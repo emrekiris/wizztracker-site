@@ -1202,5 +1202,9 @@
   "sync_off": "Yalnızca bu cihaz",
   "sign_in_to_sync": "Cihazların arasında senkronize etmek için giriş yap",
   "goal_type": "Hedef",
-  "savings_type": "Birikim"
+  "savings_type": "Birikim",
+  "link_apple": "Apple hesabını bağla",
+  "link_google": "Google hesabını bağla",
+  "link_already_used": "Bu hesap zaten başka bir hesaba bağlı — otomatik birleştirilemez.",
+  "accounts_linked": "Apple ve Google bağlı"
 }

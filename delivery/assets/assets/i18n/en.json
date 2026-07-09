@@ -1202,5 +1202,9 @@
   "sync_off": "This device only",
   "sign_in_to_sync": "Sign in to sync across your devices",
   "goal_type": "Goal",
-  "savings_type": "Savings"
+  "savings_type": "Savings",
+  "link_apple": "Link Apple account",
+  "link_google": "Link Google account",
+  "link_already_used": "This account is already linked to another account — it can't be merged automatically.",
+  "accounts_linked": "Apple and Google linked"
 }

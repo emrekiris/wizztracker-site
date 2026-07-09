@@ -1202,5 +1202,9 @@
   "sync_off": "Alleen dit apparaat",
   "sign_in_to_sync": "Log in om te synchroniseren tussen je apparaten",
   "goal_type": "Doel",
-  "savings_type": "Spaargeld"
+  "savings_type": "Spaargeld",
+  "link_apple": "Apple-account koppelen",
+  "link_google": "Google-account koppelen",
+  "link_already_used": "Dit account is al aan een ander account gekoppeld — het kan niet automatisch worden samengevoegd.",
+  "accounts_linked": "Apple en Google gekoppeld"
 }

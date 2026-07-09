@@ -1202,5 +1202,9 @@
   "sync_off": "Tylko to urządzenie",
   "sign_in_to_sync": "Zaloguj się, aby synchronizować między urządzeniami",
   "goal_type": "Cel",
-  "savings_type": "Oszczędności"
+  "savings_type": "Oszczędności",
+  "link_apple": "Połącz konto Apple",
+  "link_google": "Połącz konto Google",
+  "link_already_used": "To konto jest już połączone z innym kontem — nie można go automatycznie scalić.",
+  "accounts_linked": "Apple i Google połączone"
 }

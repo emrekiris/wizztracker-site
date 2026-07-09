@@ -1202,5 +1202,9 @@
   "sync_off": "Cet appareil uniquement",
   "sign_in_to_sync": "Connectez-vous pour synchroniser entre vos appareils",
   "goal_type": "Objectif",
-  "savings_type": "Épargne"
+  "savings_type": "Épargne",
+  "link_apple": "Lier le compte Apple",
+  "link_google": "Lier le compte Google",
+  "link_already_used": "Ce compte est déjà lié à un autre compte — il ne peut pas être fusionné automatiquement.",
+  "accounts_linked": "Apple et Google liés"
 }
