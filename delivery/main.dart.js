@@ -104197,7 +104197,7 @@ A.VR.prototype={
 A(a){return A.bbu(new A.C3(new A.axt(),null,null,t.pM),A.a([A.OO($.x(),t.lb),A.OO($.oa(),t.T),A.OO($.a5i(),t.Oi),A.OO($.a5o(),t.x1),A.OO($.aWt(),t.Gy)],t.Ds))}}
 A.axt.prototype={
 $3(a,b,c){var s=null
-return new A.t9(B.anF,"WizzTracker Delivery",A.uk(s,A.aTe(B.bf,s,s,B.q),B.Sb,!0),A.uk(s,A.aTe(B.be,s,s,B.q),B.u,!0),!1,s)},
+return new A.t9(B.anF,"Delivery",A.uk(s,A.aTe(B.bf,s,s,B.q),B.Sb,!0),A.uk(s,A.aTe(B.be,s,s,B.q),B.u,!0),!1,s)},
 $C:"$3",
 $R:3,
 $S:724}
