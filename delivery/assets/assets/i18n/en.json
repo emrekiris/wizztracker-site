@@ -1189,5 +1189,18 @@
   "show": "Show",
   "hide": "Hide",
   "custom_category": "Custom",
-  "no_records": "No records"
+  "no_records": "No records",
+  "continue_with_apple": "Continue with Apple",
+  "continue_with_google": "Continue with Google",
+  "login_tagline": "Your earnings, expenses and goals — securely synced across all your devices.",
+  "login_guest_hint": "In guest mode your data stays on this device; it syncs to all devices once you sign in.",
+  "data_management": "Data Management",
+  "sign_out_confirm": "When you sign out you'll return to guest mode on this device. Your data stays in the cloud and comes back when you sign in.",
+  "signed_out": "Signed out",
+  "not_signed_in": "Not signed in",
+  "sync_on": "Sync on — all devices",
+  "sync_off": "This device only",
+  "sign_in_to_sync": "Sign in to sync across your devices",
+  "goal_type": "Goal",
+  "savings_type": "Savings"
 }

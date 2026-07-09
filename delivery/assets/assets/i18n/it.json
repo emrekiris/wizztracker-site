@@ -1189,5 +1189,18 @@
   "show": "Mostra",
   "hide": "Nascondi",
   "custom_category": "Personalizzato",
-  "no_records": "Nessun record"
+  "no_records": "Nessun record",
+  "continue_with_apple": "Continua con Apple",
+  "continue_with_google": "Continua con Google",
+  "login_tagline": "I tuoi guadagni, le spese e gli obiettivi — sincronizzati in modo sicuro su tutti i tuoi dispositivi.",
+  "login_guest_hint": "In modalità ospite i tuoi dati restano su questo dispositivo; si sincronizzano su tutti i dispositivi quando accedi.",
+  "data_management": "Gestione dati",
+  "sign_out_confirm": "Quando esci, torni alla modalità ospite su questo dispositivo. I tuoi dati restano nel cloud e tornano al prossimo accesso.",
+  "signed_out": "Disconnesso",
+  "not_signed_in": "Accesso non effettuato",
+  "sync_on": "Sincronizzazione attiva — tutti i dispositivi",
+  "sync_off": "Solo questo dispositivo",
+  "sign_in_to_sync": "Accedi per sincronizzare tra i tuoi dispositivi",
+  "goal_type": "Obiettivo",
+  "savings_type": "Risparmi"
 }

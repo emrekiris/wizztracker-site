@@ -1189,5 +1189,18 @@
   "show": "Anzeigen",
   "hide": "Ausblenden",
   "custom_category": "Benutzerdefiniert",
-  "no_records": "Keine Einträge"
+  "no_records": "Keine Einträge",
+  "continue_with_apple": "Mit Apple fortfahren",
+  "continue_with_google": "Mit Google fortfahren",
+  "login_tagline": "Deine Einnahmen, Ausgaben und Ziele — sicher auf allen deinen Geräten synchronisiert.",
+  "login_guest_hint": "Im Gastmodus bleiben deine Daten auf diesem Gerät; sie werden auf alle Geräte synchronisiert, sobald du dich anmeldest.",
+  "data_management": "Datenverwaltung",
+  "sign_out_confirm": "Wenn du dich abmeldest, kehrst du auf diesem Gerät in den Gastmodus zurück. Deine Daten bleiben in der Cloud und sind bei der nächsten Anmeldung wieder da.",
+  "signed_out": "Abgemeldet",
+  "not_signed_in": "Nicht angemeldet",
+  "sync_on": "Synchronisierung an — alle Geräte",
+  "sync_off": "Nur dieses Gerät",
+  "sign_in_to_sync": "Melde dich an, um zwischen deinen Geräten zu synchronisieren",
+  "goal_type": "Ziel",
+  "savings_type": "Ersparnisse"
 }

@@ -1189,5 +1189,18 @@
   "show": "Weergeven",
   "hide": "Verbergen",
   "custom_category": "Aangepast",
-  "no_records": "Geen records"
+  "no_records": "Geen records",
+  "continue_with_apple": "Doorgaan met Apple",
+  "continue_with_google": "Doorgaan met Google",
+  "login_tagline": "Je inkomsten, uitgaven en doelen — veilig gesynchroniseerd op al je apparaten.",
+  "login_guest_hint": "In de gastmodus blijven je gegevens op dit apparaat; ze worden gesynchroniseerd met al je apparaten zodra je inlogt.",
+  "data_management": "Gegevensbeheer",
+  "sign_out_confirm": "Wanneer je uitlogt, keer je op dit apparaat terug naar de gastmodus. Je gegevens blijven in de cloud en komen terug wanneer je opnieuw inlogt.",
+  "signed_out": "Uitgelogd",
+  "not_signed_in": "Niet ingelogd",
+  "sync_on": "Synchronisatie aan — alle apparaten",
+  "sync_off": "Alleen dit apparaat",
+  "sign_in_to_sync": "Log in om te synchroniseren tussen je apparaten",
+  "goal_type": "Doel",
+  "savings_type": "Spaargeld"
 }

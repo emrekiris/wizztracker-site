@@ -1189,5 +1189,18 @@
   "show": "Mostrar",
   "hide": "Ocultar",
   "custom_category": "Personalizado",
-  "no_records": "Sin registros"
+  "no_records": "Sin registros",
+  "continue_with_apple": "Continuar con Apple",
+  "continue_with_google": "Continuar con Google",
+  "login_tagline": "Tus ingresos, gastos y objetivos, sincronizados de forma segura en todos tus dispositivos.",
+  "login_guest_hint": "En modo invitado tus datos permanecen en este dispositivo; se sincronizan con todos tus dispositivos cuando inicias sesión.",
+  "data_management": "Gestión de datos",
+  "sign_out_confirm": "Al cerrar sesión volverás al modo invitado en este dispositivo. Tus datos permanecen en la nube y regresan cuando vuelvas a iniciar sesión.",
+  "signed_out": "Sesión cerrada",
+  "not_signed_in": "Sin iniciar sesión",
+  "sync_on": "Sincronización activada — todos los dispositivos",
+  "sync_off": "Solo este dispositivo",
+  "sign_in_to_sync": "Inicia sesión para sincronizar entre tus dispositivos",
+  "goal_type": "Objetivo",
+  "savings_type": "Ahorros"
 }

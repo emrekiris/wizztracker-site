@@ -1189,5 +1189,18 @@
   "show": "Göster",
   "hide": "Gizle",
   "custom_category": "Özel",
-  "no_records": "Kayıt yok"
+  "no_records": "Kayıt yok",
+  "continue_with_apple": "Apple ile devam et",
+  "continue_with_google": "Google ile devam et",
+  "login_tagline": "Kazançların, giderlerin ve hedeflerin — tüm cihazlarında güvenle senkronize.",
+  "login_guest_hint": "Misafir modunda verilerin bu cihazda kalır; giriş yaptığında tüm cihazlara senkronize olur.",
+  "data_management": "Veri Yönetimi",
+  "sign_out_confirm": "Çıkış yaptığında bu cihazda misafir moduna dönersin. Verilerin bulutta kalır ve tekrar giriş yaptığında geri gelir.",
+  "signed_out": "Çıkış yapıldı",
+  "not_signed_in": "Giriş yapılmadı",
+  "sync_on": "Senkronizasyon açık — tüm cihazlar",
+  "sync_off": "Yalnızca bu cihaz",
+  "sign_in_to_sync": "Cihazların arasında senkronize etmek için giriş yap",
+  "goal_type": "Hedef",
+  "savings_type": "Birikim"
 }

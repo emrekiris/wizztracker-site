@@ -1189,5 +1189,18 @@
   "show": "Vis",
   "hide": "Skjul",
   "custom_category": "Egendefinert",
-  "no_records": "Ingen oppføringer"
+  "no_records": "Ingen oppføringer",
+  "continue_with_apple": "Fortsett med Apple",
+  "continue_with_google": "Fortsett med Google",
+  "login_tagline": "Inntektene, utgiftene og målene dine — trygt synkronisert på alle enhetene dine.",
+  "login_guest_hint": "I gjestemodus blir dataene dine værende på denne enheten; de synkroniseres til alle enheter når du logger inn.",
+  "data_management": "Databehandling",
+  "sign_out_confirm": "Når du logger ut, går du tilbake til gjestemodus på denne enheten. Dataene dine forblir i skyen og kommer tilbake når du logger inn igjen.",
+  "signed_out": "Logget ut",
+  "not_signed_in": "Ikke logget inn",
+  "sync_on": "Synkronisering på — alle enheter",
+  "sync_off": "Bare denne enheten",
+  "sign_in_to_sync": "Logg inn for å synkronisere mellom enhetene dine",
+  "goal_type": "Mål",
+  "savings_type": "Sparing"
 }

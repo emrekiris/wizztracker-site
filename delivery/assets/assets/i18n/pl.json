@@ -1189,5 +1189,18 @@
   "show": "Pokaż",
   "hide": "Ukryj",
   "custom_category": "Niestandardowa",
-  "no_records": "Brak wpisów"
+  "no_records": "Brak wpisów",
+  "continue_with_apple": "Kontynuuj z Apple",
+  "continue_with_google": "Kontynuuj z Google",
+  "login_tagline": "Twoje zarobki, wydatki i cele — bezpiecznie zsynchronizowane na wszystkich urządzeniach.",
+  "login_guest_hint": "W trybie gościa Twoje dane pozostają na tym urządzeniu; synchronizują się ze wszystkimi urządzeniami po zalogowaniu.",
+  "data_management": "Zarządzanie danymi",
+  "sign_out_confirm": "Po wylogowaniu wrócisz do trybu gościa na tym urządzeniu. Twoje dane pozostają w chmurze i wracają po ponownym zalogowaniu.",
+  "signed_out": "Wylogowano",
+  "not_signed_in": "Nie zalogowano",
+  "sync_on": "Synchronizacja włączona — wszystkie urządzenia",
+  "sync_off": "Tylko to urządzenie",
+  "sign_in_to_sync": "Zaloguj się, aby synchronizować między urządzeniami",
+  "goal_type": "Cel",
+  "savings_type": "Oszczędności"
 }
