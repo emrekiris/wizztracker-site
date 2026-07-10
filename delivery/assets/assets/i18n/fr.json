@@ -1206,5 +1206,12 @@
   "link_apple": "Lier le compte Apple",
   "link_google": "Lier le compte Google",
   "link_already_used": "Ce compte est déjà lié à un autre compte — il ne peut pas être fusionné automatiquement.",
-  "accounts_linked": "Apple et Google liés"
+  "accounts_linked": "Apple et Google liés",
+  "export_data_desc": "Téléchargez toutes vos données en JSON",
+  "export_success": "Fichier de sauvegarde créé",
+  "export_failed": "Échec de l'exportation",
+  "import_data": "Importer depuis un fichier",
+  "import_data_desc": "Restaurer une sauvegarde JSON (fusionne, ne supprime rien)",
+  "import_success": "Données importées avec succès",
+  "import_failed": "Échec de l'import — fichier invalide"
 }

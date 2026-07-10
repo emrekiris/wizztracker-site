@@ -1206,5 +1206,12 @@
   "link_apple": "Połącz konto Apple",
   "link_google": "Połącz konto Google",
   "link_already_used": "To konto jest już połączone z innym kontem — nie można go automatycznie scalić.",
-  "accounts_linked": "Apple i Google połączone"
+  "accounts_linked": "Apple i Google połączone",
+  "export_data_desc": "Pobierz wszystkie dane w formacie JSON",
+  "export_success": "Utworzono plik kopii zapasowej",
+  "export_failed": "Eksport nieudany",
+  "import_data": "Importuj z pliku",
+  "import_data_desc": "Przywróć kopię JSON (scala, nigdy nie usuwa)",
+  "import_success": "Dane zaimportowane",
+  "import_failed": "Import nieudany — nieprawidłowy plik"
 }

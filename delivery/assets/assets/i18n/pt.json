@@ -1206,5 +1206,12 @@
   "link_apple": "Vincular conta Apple",
   "link_google": "Vincular conta Google",
   "link_already_used": "Esta conta já está vinculada a outra conta — não pode ser mesclada automaticamente.",
-  "accounts_linked": "Apple e Google vinculados"
+  "accounts_linked": "Apple e Google vinculados",
+  "export_data_desc": "Baixe todos os seus dados em JSON",
+  "export_success": "Arquivo de backup criado",
+  "export_failed": "Falha na exportação",
+  "import_data": "Importar do arquivo",
+  "import_data_desc": "Restaurar backup JSON (mescla, nunca exclui)",
+  "import_success": "Dados importados com sucesso",
+  "import_failed": "Falha na importação — arquivo inválido"
 }

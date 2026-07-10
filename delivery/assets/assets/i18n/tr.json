@@ -1206,5 +1206,12 @@
   "link_apple": "Apple hesabını bağla",
   "link_google": "Google hesabını bağla",
   "link_already_used": "Bu hesap zaten başka bir hesaba bağlı — otomatik birleştirilemez.",
-  "accounts_linked": "Apple ve Google bağlı"
+  "accounts_linked": "Apple ve Google bağlı",
+  "export_data_desc": "Tüm verini JSON olarak indir",
+  "export_success": "Yedek dosyası oluşturuldu",
+  "export_failed": "Dışa aktarma başarısız",
+  "import_data": "Dosyadan İçe Aktar",
+  "import_data_desc": "JSON yedeğini geri yükle (birleştirir, veri silmez)",
+  "import_success": "Veriler içe aktarıldı",
+  "import_failed": "İçe aktarma başarısız — dosya geçersiz"
 }

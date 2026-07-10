@@ -1206,5 +1206,12 @@
   "link_apple": "Koble til Apple-konto",
   "link_google": "Koble til Google-konto",
   "link_already_used": "Denne kontoen er allerede koblet til en annen konto — den kan ikke slås sammen automatisk.",
-  "accounts_linked": "Apple og Google koblet til"
+  "accounts_linked": "Apple og Google koblet til",
+  "export_data_desc": "Last ned alle dataene dine som JSON",
+  "export_success": "Sikkerhetskopifil opprettet",
+  "export_failed": "Eksport mislyktes",
+  "import_data": "Importer fra fil",
+  "import_data_desc": "Gjenopprett JSON-sikkerhetskopi (slår sammen, sletter aldri)",
+  "import_success": "Data importert",
+  "import_failed": "Import mislyktes — ugyldig fil"
 }

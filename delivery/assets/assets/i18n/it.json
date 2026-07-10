@@ -1206,5 +1206,12 @@
   "link_apple": "Collega account Apple",
   "link_google": "Collega account Google",
   "link_already_used": "Questo account è già collegato a un altro account — non può essere unito automaticamente.",
-  "accounts_linked": "Apple e Google collegati"
+  "accounts_linked": "Apple e Google collegati",
+  "export_data_desc": "Scarica tutti i dati come JSON",
+  "export_success": "File di backup creato",
+  "export_failed": "Esportazione non riuscita",
+  "import_data": "Importa da file",
+  "import_data_desc": "Ripristina backup JSON (unisce, non elimina)",
+  "import_success": "Dati importati correttamente",
+  "import_failed": "Importazione non riuscita — file non valido"
 }

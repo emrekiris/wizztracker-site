@@ -1206,5 +1206,12 @@
   "link_apple": "Apple-account koppelen",
   "link_google": "Google-account koppelen",
   "link_already_used": "Dit account is al aan een ander account gekoppeld — het kan niet automatisch worden samengevoegd.",
-  "accounts_linked": "Apple en Google gekoppeld"
+  "accounts_linked": "Apple en Google gekoppeld",
+  "export_data_desc": "Download al je gegevens als JSON",
+  "export_success": "Back-upbestand aangemaakt",
+  "export_failed": "Exporteren mislukt",
+  "import_data": "Importeren uit bestand",
+  "import_data_desc": "JSON-back-up herstellen (voegt samen, verwijdert nooit)",
+  "import_success": "Gegevens geïmporteerd",
+  "import_failed": "Importeren mislukt — ongeldig bestand"
 }

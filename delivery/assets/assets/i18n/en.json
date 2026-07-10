@@ -1206,5 +1206,12 @@
   "link_apple": "Link Apple account",
   "link_google": "Link Google account",
   "link_already_used": "This account is already linked to another account — it can't be merged automatically.",
-  "accounts_linked": "Apple and Google linked"
+  "accounts_linked": "Apple and Google linked",
+  "export_data_desc": "Download all your data as JSON",
+  "export_success": "Backup file created",
+  "export_failed": "Export failed",
+  "import_data": "Import from File",
+  "import_data_desc": "Restore a JSON backup (merges, never deletes)",
+  "import_success": "Data imported successfully",
+  "import_failed": "Import failed — invalid file"
 }

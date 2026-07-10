@@ -1206,5 +1206,12 @@
   "link_apple": "Apple-Konto verknüpfen",
   "link_google": "Google-Konto verknüpfen",
   "link_already_used": "Dieses Konto ist bereits mit einem anderen Konto verknüpft — es kann nicht automatisch zusammengeführt werden.",
-  "accounts_linked": "Apple und Google verknüpft"
+  "accounts_linked": "Apple und Google verknüpft",
+  "export_data_desc": "Alle Daten als JSON herunterladen",
+  "export_success": "Sicherungsdatei erstellt",
+  "export_failed": "Export fehlgeschlagen",
+  "import_data": "Aus Datei importieren",
+  "import_data_desc": "JSON-Backup wiederherstellen (führt zusammen, löscht nie)",
+  "import_success": "Daten erfolgreich importiert",
+  "import_failed": "Import fehlgeschlagen — ungültige Datei"
 }
