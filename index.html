@@ -19,7 +19,7 @@
     --bg:#0a0b10; --bg2:#0d0f16; --panel:#14161f; --elev:#1b1e2a;
     --ink:#f3f5fb; --muted:#9aa2b4; --faint:#646c80; --line:#242938; --line2:#1b1f2c;
     --brand1:#2f6bff; --brand2:#9a4dff;
-    --income:#34c759; --delivery:#2f80ff; --invoice:#a855f7; --split:#ff477e; --more:#8a93a6;
+    --income:#2f80ff; --delivery:#ff8a2b; --invoice:#f5b400; --split:#34c759; --more:#8a93a6;
     --card-radius:20px;
   }
   :root[data-theme="light"]{
@@ -104,12 +104,14 @@
   .card .desc{color:var(--muted);font-size:14.5px;margin:0;flex:1}
   .chips{display:flex;flex-wrap:wrap;gap:7px}
   .chip{font-size:12px;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:4px 10px}
-  .card .act{display:flex;gap:10px;margin-top:2px}
+  .card .act{display:flex;gap:10px;margin-top:2px;flex-wrap:wrap}
   .abtn{display:inline-flex;align-items:center;gap:7px;font-weight:680;font-size:14px;padding:9px 16px;border-radius:10px;cursor:pointer;transition:.15s}
   .abtn.open{background:var(--ac);color:#fff}
   .abtn.open:hover{filter:brightness(1.08)}
   .abtn.mut{border:1px solid var(--line);color:var(--muted)}
   .abtn.mut[aria-disabled="true"]{opacity:.6;cursor:default}
+  .abtn.store{border:1px solid var(--line);color:var(--ink)}
+  .abtn.store:hover{border-color:var(--muted)}
   .abtn svg{width:15px;height:15px}
 
   /* strip */
@@ -193,7 +195,7 @@
       </div>
       <p class="desc" data-t="d_del">Kuryeler için kazanç merkezi: teslimat / saat / komisyon modeline göre otomatik kazanç, avans, araç ve yakıt takibi, raporlar.</p>
       <div class="chips"><span class="chip" data-t="c_del1">Çalışma modeli</span><span class="chip" data-t="c_del2">Araç & yakıt</span><span class="chip">10 dil</span></div>
-      <div class="act"><a class="abtn open" href="delivery/"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg><span data-t="open">Aç</span></a></div>
+      <div class="act"><a class="abtn open" href="delivery/"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg><span data-t="open">Aç</span></a><a class="abtn store" href="https://apps.apple.com/tr/app/wizztracker-delivery/id6782404547" target="_blank" rel="noopener"><svg viewBox="0 0 384 512" fill="currentColor"><path d="M318.7 268c-.3-38 17-66.6 51.9-87.7-19.5-27.9-49-43.2-87.9-46.2-36.9-2.9-77.2 21.6-91.9 21.6-15.5 0-51.2-20.6-79.2-20-40.8.6-78.8 23.7-99.8 60.3-42.6 74-10.9 183.3 30.5 243.4 20.3 29.4 44.4 62.4 76 61.2 30.5-1.2 42-19.7 78.9-19.7 36.6 0 47.2 19.7 79.2 19.1 32.7-.6 53.4-29.6 73.4-59.1 15.1-22.1 26.7-46.5 34.5-72.4-45.4-19.2-73.3-62.7-73.3-113.7zM256.9 91.9c17.9-21.6 16.3-41.3 15.8-48.4-15.9.9-34.3 10.8-44.8 23-11.6 13.1-18.4 29.3-16.9 46.9 17.2 1.3 32.9-7.6 45.9-21.5z"/></svg>App Store</a><span class="abtn mut" aria-disabled="true">Google Play · <span data-t="soon">Yakında</span></span></div>
     </div>
 
     <div class="card" style="--ac:var(--income)">
